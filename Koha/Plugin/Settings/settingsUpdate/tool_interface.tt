@@ -1,0 +1,24 @@
+[% INCLUDE 'doc-head-open.inc' %]
+ <title>Koha: Update Example Tool</title>
+[% INCLUDE 'doc-head-close.inc' %]
+</head>
+<body>
+[% INCLUDE 'header.inc' %]
+[% INCLUDE 'cat-search.inc' %]
+
+<div id="breadcrumbs"><a href="/cgi-bin/koha/mainpage.pl">Home</a> &rsaquo; <a href="/cgi-bin/koha/plugins/plugins-home.pl">Plugins</a>&rsaquo Koha update settings plugin</div>
+
+<div id="doc3">
+    <p>This is an example tool plugin for Koha. It has a button. What does it do? Nobody really knows. Only one way to find out.
+
+    <form method="post">
+        <input type="hidden" name="class" value="Koha::Plugin::Settings::settingsUpdate"/>
+        <input type="hidden" name="method" value="tool"/>
+
+        <button type="submit" name="update_z3950" value="update_z3950">Update Z3950 Servers</button>
+        <button type="submit" name="add_currency" value="add_currency">Add Currency to Database</button>
+        <button type="submit" name="update_settings" value="update_settings">Update Koha Settings</button>
+    </form>
+</body>
+</html>
+[% INCLUDE 'intranet-bottom.inc' %]
